@@ -1,6 +1,9 @@
 body {
-	background-color: #6B205F;
 	font-family: 'Lato', sans-serif;
+}
+
+body.main {
+	background-color: #6B205F;
 }
 
 hr.top { 
@@ -15,6 +18,9 @@ hr {
     border-width: 2px;
 }
 
+hr.result { 
+    color: #6B205F;
+}
 
 @media screen and (min-width: 480px) {
 	.main-title {
@@ -184,4 +190,87 @@ hr {
 .main-footer a {
 	color: #fff;
 	text-decoration: underline;
+}
+
+.header {
+	background-color: #6B205F;
+	height: 40px;
+	color: #FFF;
+	font-size: 24px;
+	font-weight: 700;
+}
+
+@media screen and (min-width: 480px) {
+	.result h2 {
+		margin-top: 70px;
+		font-size: 40px;
+		font-weight: 300;
+	}
+    .result h1 {
+		font-size: 56px;
+		font-weight: 700;
+    }
+
+	.result-subtitle {
+		font-size: 30px;
+		margin-top: 20px;
+	}
+
+	.more-info {
+		margin-top: 90px;
+		font-size: 16px;
+	}
+}
+@media screen and (max-width: 479px) {
+
+	.result h2 {
+		margin-top: 20px;
+		font-size: 20px;
+		font-weight: 300;
+	}
+    .result h1 {
+		font-size: 28px;
+		font-weight: 700;
+    }
+
+	.result-subtitle {
+		font-size: 15px;
+		margin-top: 8px;
+	}
+
+	.more-info {
+		margin-top: 20px;
+		font-size: 8px;
+	}
+}
+
+.result {
+	color: #6B205F;
+	text-align: center;
+}
+
+.result-subtitle {
+	padding: 20px 20px 20px 20px;
+	color: #6B205F;
+	border: 2px solid #6B205F;
+}
+
+.result-subtitle a {
+	color: #6B205F;
+	text-decoration: underline;
+}
+
+.more-info {
+	background-color: #6B205F;
+	color: #FFF;
+	padding-top: 12px;
+}
+
+.more-info a {
+	color: #FFF;
+	text-decoration: underline;
+}
+
+.answer-btn {
+		font-size:133%;
 }
