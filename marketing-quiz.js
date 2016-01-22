@@ -1,10 +1,12 @@
 var marketingQuiz = (function () {
-  var self = this;
 
   function clickQuestion (index) {
     marketingQuiz.userInput.answers.push(index);
-    marketingQuiz.renderQuestion(marketingQuiz.userInput.answers.length);
-    console.log('marketingQuiz.userInput.answers:', marketingQuiz.userInput.answers);
+    if (isFinished()) {
+      redirectTo(calculateAdvice());
+    } else {
+      marketingQuiz.renderQuestion(marketingQuiz.userInput.answers.length);
+    }
   }
 
   function renderQuestion (questionsIndex) {
@@ -18,6 +20,34 @@ var marketingQuiz = (function () {
     question.answers.forEach(function (answer, index) {
       rowElement.append('<div class="col-md-4" onclick="marketingQuiz.clickQuestion('+index+')">'+answer.answer+'</div>');
     });
+
+  }
+
+  function isFinished () {
+    return marketingQuiz.quizData.questions.length <= marketingQuiz.userInput.answers.length
+  }
+
+  function calculateAdvice (index) {
+    var results = {};
+
+    marketingQuiz.quizData.questions.forEach(function (question) {
+      question.answers.forEach(function (answer) {
+        if (!answer.scores) return;
+        Object.keys(answer.scores).forEach(function (key) {
+          if (results[key]) {
+            results[key] = results[key] + answer.scores[key];
+          } else {
+            results[key] = answer.scores[key];
+          }
+        });
+      });
+    });
+
+    console.log("results", results);
+    return results;
+  }
+
+  function redirectTo () {
 
   }
 
