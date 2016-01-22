@@ -1,0 +1,19 @@
+{
+  "name": "marketing-quiz",
+  "version": "0.0.1",
+  "description": "marketing-quiz",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xebia/marketing-quiz.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/xebia/marketing-quiz/issues"
+  },
+  "homepage": "https://github.com/xebia/marketing-quiz#readme"
+}
