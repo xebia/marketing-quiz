@@ -22,14 +22,21 @@ hr.result {
     color: #6B205F;
 }
 
+.quiz .main-title h1 {
+	color: #6B205F;
+}
+
 @media screen and (min-width: 480px) {
 	.main-title {
 		text-align: center;
 		margin-top: 90px;
 	}
-    .main-title h1 {
+    .main .main-title h1 {
 		font-size: 48px;
 		color: #FFF;
+    }
+    .main-title h1 {
+		font-size: 48px;
     }
 
 	.main-subtitle {
