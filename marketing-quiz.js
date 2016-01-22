@@ -3,7 +3,7 @@ var marketingQuiz = (function () {
   function clickQuestion (index) {
     marketingQuiz.userInput.answers.push(index);
     if (isFinished()) {
-      redirectTo(calculateAdvice(marketingQuiz.userInput.answers));
+      window.location.href = redirectTo(calculateAdvice(marketingQuiz.userInput.answers)) + '/';
     } else {
       marketingQuiz.renderQuestion(marketingQuiz.userInput.answers.length);
     }
@@ -77,7 +77,7 @@ var marketingQuiz = (function () {
       }
     });
 
-    console.log('highest', highest, highestScore);
+    return highest;
   }
 
   return {
@@ -98,11 +98,11 @@ var marketingQuiz = (function () {
               "icon": "yes.png",
               "color": "#4CAF50",
               "scores": {
-                "Native": 2,
-                "Xamarin": 1,
-                "React Native": 1,
-                "Hybrid": 0,
-                "Web": -1,
+                "native": 2,
+                "xamarin": 1,
+                "reactnative": 1,
+                "hybrid": 0,
+                "web": -1,
               }
             },
             {
@@ -111,11 +111,11 @@ var marketingQuiz = (function () {
               "icon": "no.png",
               "color": "#F44336",
               "scores": {
-                "Native": -1,
-                "Xamarin": 0,
-                "React Native": 0,
-                "Hybrid": 1,
-                "Web": 1,
+                "native": -1,
+                "xamarin": 0,
+                "reactnative": 0,
+                "hybrid": 1,
+                "web": 1,
               }
             },
             {
@@ -124,11 +124,11 @@ var marketingQuiz = (function () {
               "icon": "question_mark.png",
               "color": "#9E9E9E",
               "scores": {
-                "Native": 0,
-                "Xamarin": 1,
-                "React Native": 1,
-                "Hybrid": 0,
-                "Web": 0,
+                "native": 0,
+                "xamarin": 1,
+                "reactnative": 1,
+                "hybrid": 0,
+                "web": 0,
               }
             }
           ],
@@ -144,11 +144,11 @@ var marketingQuiz = (function () {
               "icon": "phone.png",
               "color": "#2196F3",
               "scores": {
-                "Native": 1,
-                "Xamarin": 1,
-                "React Native": 1,
-                "Hybrid": 1,
-                "Web": 1,
+                "native": 1,
+                "xamarin": 1,
+                "reactnative": 1,
+                "hybrid": 1,
+                "web": 1,
               }
             },
             {
@@ -157,11 +157,11 @@ var marketingQuiz = (function () {
               "icon": "tablet.png",
               "color": "#3F51B5",
               "scores": {
-                "Native": 2,
-                "Xamarin": 2,
-                "React Native": 2,
-                "Hybrid": 1,
-                "Web": 0,
+                "native": 2,
+                "xamarin": 2,
+                "reactnative": 2,
+                "hybrid": 1,
+                "web": 0,
               }
             },
             {
@@ -170,11 +170,11 @@ var marketingQuiz = (function () {
               "icon": "phone_tablet.png",
               "color": "#673AB7",
               "scores": {
-                "Native": 2,
-                "Xamarin": 0,
-                "React Native": 0,
-                "Hybrid": 1,
-                "Web": 2,
+                "native": 2,
+                "xamarin": 0,
+                "reactnative": 0,
+                "hybrid": 1,
+                "web": 2,
               }
             }
           ],
@@ -188,22 +188,22 @@ var marketingQuiz = (function () {
         //       "id": "1",
         //       "answer": "iOS",
         //       "scores": {
-        //         "Native": ,
-        //         "Xamarin": ,
-        //         "React Native": ,
-        //         "Hybrid": ,
-        //         "Web": -,
+        //         "native": ,
+        //         "xamarin": ,
+        //         "reactnative": ,
+        //         "hybrid": ,
+        //         "web": -,
         //       }
         //     },
         //     {
         //       "id": "2",
         //       "answer": "Android",
         //       "scores": {
-        //         "Native": ,
-        //         "Xamarin": ,
-        //         "React Native": ,
-        //         "Hybrid": ,
-        //         "Web": -,
+        //         "native": ,
+        //         "xamarin": ,
+        //         "reactnative": ,
+        //         "hybrid": ,
+        //         "web": -,
         //       },
         //       "excludes": [
         //         "2.1"
@@ -213,11 +213,11 @@ var marketingQuiz = (function () {
         //       "id": "3",
         //       "answer": "Windows",
         //       "scores": {
-        //         "Native": ,
-        //         "Xamarin": ,
-        //         "React Native": ,
-        //         "Hybrid": ,
-        //         "Web": -,
+        //         "native": ,
+        //         "xamarin": ,
+        //         "reactnative": ,
+        //         "hybrid": ,
+        //         "web": -,
         //       },
         //       "excludes": [
         //         "2.1"
@@ -227,11 +227,11 @@ var marketingQuiz = (function () {
         //       "id": "4",
         //       "answer": "Not Shure Yet",
         //       "scores": {
-        //         "Native": ,
-        //         "Xamarin": ,
-        //         "React Native": ,
-        //         "Hybrid": ,
-        //         "Web": -,
+        //         "native": ,
+        //         "xamarin": ,
+        //         "reactnative": ,
+        //         "hybrid": ,
+        //         "web": -,
         //       },
         //       "excludes": [
         //         "2.1"
@@ -283,11 +283,11 @@ var marketingQuiz = (function () {
               "icon": "phone_tables.png",
               "color": "#2196F3",
               "scores": {
-                "Native": 1,
-                "Xamarin": 2,
-                "React Native": 2,
-                "Hybrid": 1,
-                "Web": 0,
+                "native": 1,
+                "xamarin": 2,
+                "reactnative": 2,
+                "hybrid": 1,
+                "web": 0,
               }
             },{
               "id": "2",
@@ -295,11 +295,11 @@ var marketingQuiz = (function () {
               "icon": "phone_form.png",
               "color": "#CDDC39",
               "scores": {
-                "Native": 0,
-                "Xamarin": 3,
-                "React Native": 1,
-                "Hybrid": 2,
-                "Web": 2,
+                "native": 0,
+                "xamarin": 3,
+                "reactnative": 1,
+                "hybrid": 2,
+                "web": 2,
               }
             },{
               "id": "3",
@@ -307,11 +307,11 @@ var marketingQuiz = (function () {
               "icon": "phone_graphics.png",
               "color": "#FF5722",
               "scores": {
-                "Native": 2,
-                "Xamarin": 0,
-                "React Native": 0,
-                "Hybrid": 1,
-                "Web": 1,
+                "native": 2,
+                "xamarin": 0,
+                "reactnative": 0,
+                "hybrid": 1,
+                "web": 1,
               }
             },{
               "id": "4",
@@ -319,11 +319,11 @@ var marketingQuiz = (function () {
               "icon": "phone_two_screens.png",
               "color": "#E91E63",
               "scores": {
-                "Native": 0,
-                "Xamarin": 1,
-                "React Native": 1,
-                "Hybrid": 2,
-                "Web": 2,
+                "native": 0,
+                "xamarin": 1,
+                "reactnative": 1,
+                "hybrid": 2,
+                "web": 2,
               }
             },{
               "id": "5",
@@ -331,11 +331,11 @@ var marketingQuiz = (function () {
               "icon": "phone_web.png",
               "color": "#FFC107",
               "scores": {
-                "Native": 0,
-                "Xamarin": 0,
-                "React Native": 1,
-                "Hybrid": 2,
-                "Web": 3,
+                "native": 0,
+                "xamarin": 0,
+                "reactnative": 1,
+                "hybrid": 2,
+                "web": 3,
               }
             },{
               "id": "6",
@@ -343,11 +343,11 @@ var marketingQuiz = (function () {
               "icon": "cross.png",
               "color": "#9E9E9E",
               "scores": {
-                "Native": 3,
-                "Xamarin": 2,
-                "React Native": 1,
-                "Hybrid": 0,
-                "Web": 0,
+                "native": 3,
+                "xamarin": 2,
+                "reactnative": 1,
+                "hybrid": 0,
+                "web": 0,
               }
             }
           ],
@@ -379,8 +379,8 @@ var marketingQuiz = (function () {
       ],
       "results": [
         {
-          "id": "Native",
-          "Description": "Native apps offer the best performance and greatest flexibility. If your app is part of your core business and has a long live time then this most likely your best choice.",
+          "id": "native",
+          "Description": "native apps offer the best performance and greatest flexibility. If your app is part of your core business and has a long live time then this most likely your best choice.",
           "icon": "todo.png"
         }
       ]
