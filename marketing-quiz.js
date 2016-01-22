@@ -14,11 +14,14 @@ var marketingQuiz = (function () {
 
     var question = marketingQuiz.quizData.questions[questionsIndex];
     var element = $('#question');
-    element.html('<div class="row"><div class="col-md-6 col-md-offset-3 main-subtitle"><p>'+question.question+'</p></div></div>');
+    element.html('<div class="row"><div class="col-md-8 col-md-offset-2 main-subtitle"><p>'+question.question+'</p></div></div>');
 
     var rowElement = element.append('<div class="row"></div>');
     question.answers.forEach(function (answer, index) {
-      var tpl =  '<div class="col-md-4 col-md-offset-4 main-subtitle"><button type="button" onclick="marketingQuiz.clickQuestion('+index+')" class="btn btn-primary btn-lg btn-block">'+answer.answer+'</button></div>';
+      var tpl = '<div class="col-md-4">';
+      tpl += '<div class="circle" style="background:'+answer.color+';"><span></span><p><img src="images/icon/'+answer.icon+'"/></p></div>';
+      tpl += '<button type="button" onclick="marketingQuiz.clickQuestion('+index+')" class="btn btn-primary btn-block">'+answer.answer+'</button>'
+      tpl += '</div>';
       rowElement.append(tpl);
     });
 
