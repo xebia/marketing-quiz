@@ -19,7 +19,7 @@ hr {
 @media screen and (min-width: 480px) {
 	.main-title {
 		text-align: center;
-		margin-top: 100px;
+		margin-top: 90px;
 	}
     .main-title h1 {
 		font-size: 48px;
@@ -28,7 +28,7 @@ hr {
 
 	.main-subtitle {
 		text-align: center;
-		margin-top: 50px;
+		margin-top: 40px;
 	}
 	.main-subtitle p {
 		font-size: 28px;
@@ -180,4 +180,8 @@ hr {
 	*display: inline;
 	vertical-align: middle;
 	color: #fff;
+}
+.main-footer a {
+	color: #fff;
+	text-decoration: underline;
 }
