@@ -89,6 +89,8 @@ var marketingQuiz = (function () {
             {
               "id": "1",
               "answer": "Yes",
+              "icon": "yes.png",
+              "color": "#4CAF50",
               "scores": {
                 "Native": 2,
                 "Xamarin": 1,
@@ -100,6 +102,8 @@ var marketingQuiz = (function () {
             {
               "id": "2",
               "answer": "No",
+              "icon": "no.png",
+              "color": "#F44336",
               "scores": {
                 "Native": -1,
                 "Xamarin": 0,
@@ -111,6 +115,8 @@ var marketingQuiz = (function () {
             {
               "id": "2",
               "answer": "Not sure",
+              "icon": "question_mark.png",
+              "color": "#9E9E9E",
               "scores": {
                 "Native": 0,
                 "Xamarin": 1,
