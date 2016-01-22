@@ -249,22 +249,34 @@ var marketingQuiz = (function () {
           "answers": [
             {
               "id": "1",
-              "answer": "It’s mainly tables with text and numbers"
+              "answer": "It’s mainly tables with text and numbers",
+              "icon": "phone_tables.png",
+              "color": "#2196F3"
             },{
               "id": "2",
               "answer": "The users need to fill in forms and submit data"
+              "icon": "phone_form.png",
+              "color": "#CDDC39"
             },{
               "id": "3",
               "answer": "A lot of custom graphics and animations"
+              "icon": "phone_graphics.png",
+              "color": "#FF5722"
             },{
               "id": "4",
               "answer": "It only has one or two screens"
+              "icon": "phone_two_screens.png",
+              "color": "#E91E63"
             },{
               "id": "5",
               "answer": "It contains the same information as our (corporate) website"
+              "icon": "phone_web.png",
+              "color": "#FFC107"
             },{
               "id": "6",
               "answer": "None of the others"
+              "icon": "cross.png",
+              "color": "#9E9E9E"
             }
           ],
           "type": "checkbox"
