@@ -135,6 +135,8 @@ var marketingQuiz = (function () {
             {
               "id": "1",
               "answer": "Phone",
+              "icon": "phone.png",
+              "color": "#2196F3",
               "scores": {
                 "Native": 1,
                 "Xamarin": 1,
@@ -146,6 +148,8 @@ var marketingQuiz = (function () {
             {
               "id": "2",
               "answer": "Tablet",
+              "icon": "tablet.png",
+              "color": "#3F51B5",
               "scores": {
                 "Native": 2,
                 "Xamarin": 2,
@@ -157,6 +161,8 @@ var marketingQuiz = (function () {
             {
               "id": "2",
               "answer": "Both",
+              "icon": "phone_tablet.png",
+              "color": "#673AB7",
               "scores": {
                 "Native": 2,
                 "Xamarin": 0,
