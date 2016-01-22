@@ -1,0 +1,115 @@
+body {
+	background-color: #6B205F;
+	font-family: 'Lato', sans-serif;
+}
+
+hr.top { 
+    display: block;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-width: 2px;
+}
+
+hr { 
+    display: block;
+    border-width: 2px;
+}
+
+.main-title {
+	text-align: center;
+	margin-top: 100px;
+}
+.main-title h1 {
+	font-size: 48px;
+	color: #FFF;
+}
+
+.main-subtitle {
+	text-align: center;
+	margin-top: 50px;
+}
+.main-subtitle p {
+	font-size: 28px;
+	color: #FFF;
+}
+
+.btn-primary {
+	border-color: #FFF !important;
+	background: #FFF !important;
+  	color: #6B205F !important;
+	font-size: 48px;
+  	font-weight: 700;
+}
+
+.main-links {
+	font-size: 20px;
+	color: #FFF;
+	font-weight: 300;
+	text-align: right;
+	margin-top: 100px;
+}
+
+.main-links a {
+	font-weight: 400;
+	color: #FFF;
+	text-decoration: underline;
+	margin-left: 20px;
+}
+
+.main-footer p {
+	margin-left: 20px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	font-size: 20px;
+	color: #FFF;
+	font-weight: 400;
+	text-align: left;
+}
+
+#tablet1 {
+	position: fixed;
+	left: 171px;
+	top: 155px;
+}
+
+#tablet2 {
+	position: fixed;
+	left: 547px;
+	top: 483px;
+}
+
+#tablet3 {
+	position: fixed;
+	left: 767px;
+	top: 47px;
+}
+
+#tablet4 {
+	position: fixed;
+	left: 1080px;
+	top: 440px;
+}
+
+#phone1 {
+	position: fixed;
+	left: 137px;
+	top: 483px;
+}
+
+#phone2 {
+	position: fixed;
+	left: 353px;
+	top: 411px;
+}
+
+#phone3 {
+	position: fixed;
+	left: 839px;
+	top: 341px;
+}
+
+#phone4 {
+	position: fixed;
+	left: 1111px;
+	top: 210px;
+}
