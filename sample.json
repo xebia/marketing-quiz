@@ -1,53 +1,64 @@
-[
-	{
-		"id": "1",
-		"question": "Which devices do you want to support?"
-		"answers" [
-			{
-				"id": "1",
-				"answer": "Phone",
-				"scores": {
-					"Native": 2,
-					"Xamarin": 0,
-					"Web": -1
-				}
-			},
-			{
-				"id": "2",
-				"answer": "Tablet",
-				"scores": {
-					"Native": 2,
-					"Xamarin": 0,
-					"Web": -1
-				},
-				"excludes": ["2.1"]
-			}
-		],
-		"type": "radio"
-	},
-	{
-		"id": "2",
-		"question": "Which devices do you want to support?"
-		"answers" [
-			{
-				"id": "1",
-				"answer": "Phone",
-				"scores": {
-					"Native": 2,
-					"Xamarin": 0,
-					"Web": -1
-				}
-			},
-			{
-				"id": "2",
-				"answer": "Tablet",
-				"scores": {
-					"Native": 2,
-					"Xamarin": 0,
-					"Web": -1
-				}
-			}
-		],
-		"type": "radio"
-	}
-]
+{
+  "questions": [
+    {
+      "id": "1",
+      "question": "Which devices do you want to support?",
+      "answers": [
+        {
+          "id": "1",
+          "answer": "Phone",
+          "scores": {
+            "Native": 2,
+            "Xamarin": 0,
+            "Web": -1
+          }
+        },
+        {
+          "id": "2",
+          "answer": "Tablet",
+          "scores": {
+            "Native": 2,
+            "Xamarin": 0,
+            "Web": -1
+          },
+          "excludes": [
+            "2.1"
+          ]
+        }
+      ],
+      "type": "radio"
+    },
+    {
+      "id": "2",
+      "question": "Which devices do you want to support?",
+      "answers": [
+        {
+          "id": "1",
+          "answer": "Phone",
+          "scores": {
+            "Native": 2,
+            "Xamarin": 0,
+            "Web": -1
+          }
+        },
+        {
+          "id": "2",
+          "answer": "Tablet",
+          "scores": {
+            "Native": 2,
+            "Xamarin": 0,
+            "Web": -1
+          }
+        }
+      ],
+      "type": "radio"
+    }
+  ],
+  "results": [
+    {
+      "id": "Native",
+      "Description": "Native apps offer the best performance and greatest flexibility. If your app is part of your core business and has a long live time then this most likely your best choice.",
+      "icon": "todo.png"
+    }
+  ]
+}
