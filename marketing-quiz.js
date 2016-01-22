@@ -14,7 +14,10 @@ var marketingQuiz = (function () {
 
     var question = marketingQuiz.quizData.questions[questionsIndex];
     var element = $('#question');
-    element.html('<div class="row"><div class="col-md-8 col-md-offset-2 main-subtitle"><p>'+question.question+'</p></div></div>');
+    element.html('<div class="container-fluid main-title"><h1>'+question.question+'</h1></div><hr class="top">');
+
+
+
 
     var rowElement = element.append('<div class="row"></div>');
     question.answers.forEach(function (answer, index) {
