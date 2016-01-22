@@ -23,7 +23,7 @@ var marketingQuiz = (function () {
     question.answers.forEach(function (answer, index) {
       var tpl = '<div class="col-md-4">';
       tpl += '<div class="circle" style="background:'+answer.color+';"><span></span><p><img src="images/icon/'+answer.icon+'"/></p></div>';
-      tpl += '<button type="button" onclick="marketingQuiz.clickQuestion('+index+')" class="btn btn-primary btn-block">'+answer.answer+'</button>'
+      tpl += '<button type="button" onclick="marketingQuiz.clickQuestion('+index+')" class="btn btn-primary btn-block answer-btn">'+answer.answer+'</button>'
       tpl += '</div>';
       rowElement.append(tpl);
     });
