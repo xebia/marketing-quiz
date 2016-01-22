@@ -3,7 +3,7 @@ var marketingQuiz = (function () {
   function clickQuestion (index) {
     marketingQuiz.userInput.answers.push(index);
     if (isFinished()) {
-      redirectTo(calculateAdvice());
+      redirectTo(calculateAdvice(marketingQuiz.userInput.answers));
     } else {
       marketingQuiz.renderQuestion(marketingQuiz.userInput.answers.length);
     }
@@ -27,18 +27,26 @@ var marketingQuiz = (function () {
     return marketingQuiz.quizData.questions.length <= marketingQuiz.userInput.answers.length
   }
 
-  function calculateAdvice (index) {
+  function calculateAdvice (userAnswers) {
     var results = {};
 
     marketingQuiz.quizData.questions.forEach(function (question) {
-      question.answers.forEach(function (answer) {
-        if (!answer.scores) return;
+      question.answers.forEach(function (answer, answerIndex) {
+        if (!answer.scores) {
+          return;
+        };
+
+        //is answer selected by user.
+        if (userAnswers[answerIndex] && userAnswers[answerIndex] === answerIndex) {
+          return;
+        };
+
         Object.keys(answer.scores).forEach(function (key) {
-          if (results[key]) {
-            results[key] = results[key] + answer.scores[key];
-          } else {
-            results[key] = answer.scores[key];
-          }
+            if (results[key]) {
+              results[key] = results[key] + answer.scores[key];
+            } else {
+              results[key] = answer.scores[key];
+            }
         });
       });
     });
@@ -47,8 +55,22 @@ var marketingQuiz = (function () {
     return results;
   }
 
-  function redirectTo () {
+  function redirectTo (results) {
+    var highest = undefined;
+    var highestScore = undefined;
+    Object.keys(results).forEach(function (key) {
+      if (highest) {
+        if (results[key] > highestScore) {
+          highest = key;
+          highestScore = results[key];
+        }
+      } else {
+        highest = key;
+        highestScore = results[key];
+      }
+    });
 
+    console.log('highest', highest, highestScore);
   }
 
   return {
