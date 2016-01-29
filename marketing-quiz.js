@@ -14,7 +14,7 @@ var marketingQuiz = (function () {
 
     var question = marketingQuiz.quizData.questions[questionsIndex];
     var element = $('#question');
-    element.html('<div class="container-fluid main-title"><h1>'+question.question+'</h1></div><hr class="top">');
+    element.html('<div class="container-fluid main-title"><h1>'+question.question+'</h1></div><hr class="top result">');
 
 
 
@@ -22,8 +22,9 @@ var marketingQuiz = (function () {
     var rowElement = element.append('<div class="row"></div>');
     question.answers.forEach(function (answer, index) {
       var tpl = '<div class="col-md-4">';
+      tpl += '<a onclick="marketingQuiz.clickQuestion('+index+')" class="answer-btn">';
       tpl += '<div class="circle" style="background:'+answer.color+';"><span></span><p><img src="images/icon/'+answer.icon+'"/></p></div>';
-      tpl += '<button type="button" onclick="marketingQuiz.clickQuestion('+index+')" class="btn btn-primary btn-block answer-btn">'+answer.answer+'</button>'
+      tpl += answer.answer+'</a>'
       tpl += '</div>';
       rowElement.append(tpl);
     });

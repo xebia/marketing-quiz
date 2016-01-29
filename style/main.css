@@ -19,7 +19,7 @@ hr {
 }
 
 hr.result { 
-    color: #6B205F;
+    border-color: #6B205F;
 }
 
 .quiz .main-title h1 {
@@ -52,7 +52,7 @@ hr.result {
 		font-size: 48px;
 	}
 
-	.main-footer p {
+	.footer p {
 		font-size: 16px;
 	}
 
@@ -85,7 +85,7 @@ hr.result {
 		font-size: 24px;
 	}
 
-	.main-footer p {
+	.footer p {
 		font-size: 12px;
 	}
 
@@ -122,6 +122,10 @@ hr.result {
 	color: #FFF;
 	font-weight: 400;
 	text-align: left;
+}
+.main-footer a {
+	color: #fff;
+	text-decoration: underline;
 }
 
 #tablet1 {
@@ -194,10 +198,6 @@ hr.result {
 	vertical-align: middle;
 	color: #fff;
 }
-.main-footer a {
-	color: #fff;
-	text-decoration: underline;
-}
 
 .header {
 	background-color: #6B205F;
@@ -209,11 +209,12 @@ hr.result {
 
 @media screen and (min-width: 480px) {
 	.result h2 {
-		margin-top: 70px;
+		margin-top: 50px;
 		font-size: 40px;
 		font-weight: 300;
 	}
     .result h1 {
+		margin-top: 10px;
 		font-size: 56px;
 		font-weight: 700;
     }
@@ -224,7 +225,6 @@ hr.result {
 	}
 
 	.more-info {
-		margin-top: 90px;
 		font-size: 16px;
 	}
 }
@@ -236,6 +236,7 @@ hr.result {
 		font-weight: 300;
 	}
     .result h1 {
+		margin-top: 4px;
 		font-size: 28px;
 		font-weight: 700;
     }
@@ -246,7 +247,6 @@ hr.result {
 	}
 
 	.more-info {
-		margin-top: 20px;
 		font-size: 8px;
 	}
 }
@@ -267,9 +267,28 @@ hr.result {
 	text-decoration: underline;
 }
 
+.result-text {
+	border-bottom: 2px solid #6B205F
+}
+
+.result-footer p {
+	margin-left: 20px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	color: #6B205F;
+	font-weight: 400;
+	text-align: left;
+}
+
+.result-footer a {
+	color: #6B205F;
+	text-decoration: underline;
+}
+
 .more-info {
 	background-color: #6B205F;
 	color: #FFF;
+	margin-top: 0px;
 	padding-top: 12px;
 }
 
@@ -279,5 +298,23 @@ hr.result {
 }
 
 .answer-btn {
-		font-size:133%;
+	font-size: 32px;
+	font-weight: 300;
+	text-align: center;
+	display: block;
+}
+
+.answer-btn {
+	text-decoration: none;
+	color: #6B205F;
+}
+
+.logo {
+	padding: 20px 0px 20px 0px;
+	text-align: center;
+}
+
+.logo img {
+	max-width: 150px;
+	max-height: 150px;
 }
